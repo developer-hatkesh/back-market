@@ -1,0 +1,6 @@
+{
+  "name": "BackMarket Atelier - Premium Refurbished Tech",
+  "description": "High-end marketplace for refurbished iPhone, MacBook, Samsung Galaxy, and Google Pixel devices with verified grading, extended warranty options, trade-in, and side-by-side comparison.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
