@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ShieldCheck, ArrowRight, Sparkles, Leaf, RefreshCcw } from 'lucide-react';
 import { Product } from '../types';
+import { heroRefurbished, iphoneShowcase, macbookShowcase } from '../assets/imageAssets';
 
 interface HomeHeroSliderProps {
   onExploreCategory: (cat: string) => void;
@@ -23,7 +24,7 @@ export const HomeHeroSlider: React.FC<HomeHeroSliderProps> = ({
       badge: 'Certified Flagship Refurbished',
       title: 'iPhone 16 & Flagship Phones. Up to 40% Off.',
       description: 'Tested across 25 hardware diagnostics with genuine displays, minimum 85% battery health, and a complimentary 12-month UK commercial warranty.',
-      image: '/src/assets/images/product_iphone16_showcase_1791795395569.jpg',
+      image: iphoneShowcase,
       ctaText: 'Configure iPhone 16',
       ctaAction: () => onSelectProductBySlug('iphone-16'),
       secondaryText: 'Browse All Phones',
@@ -36,7 +37,7 @@ export const HomeHeroSlider: React.FC<HomeHeroSliderProps> = ({
       badge: 'Pro Studio Performance',
       title: 'Apple MacBook Pro & Air with M3. From £829.',
       description: 'Retina XDR displays, multi-day battery longevity, and silent high-speed processing. Zero compromises, backed by 30-day money-back guarantee.',
-      image: '/src/assets/images/product_macbook_pro_showcase_1791795407981.jpg',
+      image: macbookShowcase,
       ctaText: 'Explore MacBooks',
       ctaAction: () => onExploreCategory('laptops'),
       secondaryText: 'Configure MacBook Pro',
@@ -49,7 +50,7 @@ export const HomeHeroSlider: React.FC<HomeHeroSliderProps> = ({
       badge: 'Instant Cash Voucher',
       title: 'Trade In Your Old Gadget. Get Up to £250 Credit.',
       description: 'Send us your old phone, tablet, or laptop with free prepaid postage. Receive instant credit applied directly to your refurbished basket.',
-      image: '/src/assets/images/hero_refurbished_flagship_1791795384385.jpg',
+      image: heroRefurbished,
       ctaText: 'Calculate Trade-In Value',
       ctaAction: onOpenTradeIn,
       secondaryText: 'View Condition Guide',

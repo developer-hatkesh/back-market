@@ -1,11 +1,12 @@
 import React from 'react';
 import { Smartphone, Laptop, Tablet, Watch, RefreshCcw, ArrowRight } from 'lucide-react';
+import { heroRefurbished, iphoneShowcase, macbookShowcase } from '../assets/imageAssets';
 interface Props { onSelectCategory: (cat: string) => void; activeCategory: string; onOpenTradeIn: () => void; isDark: boolean; }
 const categories = [
-  { id: 'smartphones', name: 'Smartphones & iPhones', count: '7 models in stock', icon: Smartphone, highlight: 'From £329', image: '/src/assets/images/product_iphone16_showcase_1791795395569.jpg' },
-  { id: 'laptops', name: 'MacBooks & Laptops', count: '2 models in stock', icon: Laptop, highlight: 'From £829', image: '/src/assets/images/product_macbook_pro_showcase_1791795407981.jpg' },
-  { id: 'tablets', name: 'iPads & Tablets', count: '1 model in stock', icon: Tablet, highlight: 'From £799', image: '/src/assets/images/product_macbook_pro_showcase_1791795407981.jpg' },
-  { id: 'wearables', name: 'Watches & Wearables', count: '1 model in stock', icon: Watch, highlight: 'From £549', image: '/src/assets/images/hero_refurbished_flagship_1791795384385.jpg' },
+  { id: 'smartphones', name: 'Smartphones & iPhones', count: '7 models in stock', icon: Smartphone, highlight: 'From £329', image: iphoneShowcase },
+  { id: 'laptops', name: 'MacBooks & Laptops', count: '2 models in stock', icon: Laptop, highlight: 'From £829', image: macbookShowcase },
+  { id: 'tablets', name: 'iPads & Tablets', count: '1 model in stock', icon: Tablet, highlight: 'From £799', image: macbookShowcase },
+  { id: 'wearables', name: 'Watches & Wearables', count: '1 model in stock', icon: Watch, highlight: 'From £549', image: heroRefurbished },
 ];
 export const CategoryNavGrid: React.FC<Props> = ({ onSelectCategory, onOpenTradeIn, isDark }) => <section className={`py-12 border-b ${isDark ? 'bg-neutral-950 border-neutral-900' : 'bg-white border-neutral-200'}`}>
   <div className="max-w-7xl mx-auto px-4 sm:px-6"><div className="flex items-end justify-between mb-6"><div><h2 className={`text-2xl font-black ${isDark ? 'text-white' : 'text-neutral-950'}`}>Shop by Category</h2><p className={`text-sm mt-1 ${isDark ? 'text-neutral-400' : 'text-neutral-500'}`}>Pick a collection to visit its dedicated product page.</p></div><button onClick={() => onSelectCategory('all')} className="text-xs font-bold text-emerald-600 flex items-center gap-1">View all tech <ArrowRight className="w-4 h-4" /></button></div>

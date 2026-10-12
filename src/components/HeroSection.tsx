@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Sparkles, RefreshCcw, Leaf, ArrowRight } from 'lucide-react';
+import { heroRefurbished } from '../assets/imageAssets';
 
 interface HeroSectionProps {
   onSelectCategory: (cat: string) => void;
@@ -96,7 +97,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 shadow-2xl">
               <img
-                src="/src/assets/images/hero_refurbished_flagship_1791795384385.jpg"
+                src={heroRefurbished}
                 alt="Refurbished flagship Apple and Android electronics"
                 className="w-full h-72 sm:h-84 lg:h-96 object-cover object-center"
                 referrerPolicy="no-referrer"

@@ -2,13 +2,14 @@ import React from 'react';
 import { ArrowLeft, SlidersHorizontal } from 'lucide-react';
 import { Product } from '../types';
 import { ProductCard } from './ProductCard';
+import { heroRefurbished, iphoneShowcase, macbookShowcase } from '../assets/imageAssets';
 
 const categoryCopy: Record<string, { title: string; eyebrow: string; description: string; image: string }> = {
-  all: { title: 'All refurbished tech', eyebrow: 'The complete collection', description: 'Every inspected device in one place. Compare condition, capacity and price to find your fit.', image: '/src/assets/images/hero_refurbished_flagship_1791795384385.jpg' },
-  smartphones: { title: 'Refurbished smartphones', eyebrow: 'Pocket-sized power', description: 'Flagship iPhone, Galaxy and Pixel devices, unlocked and tested across our full inspection checklist.', image: '/src/assets/images/product_iphone16_showcase_1791795395569.jpg' },
-  laptops: { title: 'Refurbished laptops', eyebrow: 'Work without compromise', description: 'Portable performance for focused work, creative projects and everything between.', image: '/src/assets/images/product_macbook_pro_showcase_1791795407981.jpg' },
-  tablets: { title: 'Refurbished tablets', eyebrow: 'A canvas for anything', description: 'Flexible screens for drawing, streaming, reading and work on the move.', image: '/src/assets/images/product_macbook_pro_showcase_1791795407981.jpg' },
-  wearables: { title: 'Refurbished smartwatches', eyebrow: 'Technology in step', description: 'Fitness, navigation and notifications from fully tested wearable devices.', image: '/src/assets/images/hero_refurbished_flagship_1791795384385.jpg' },
+  all: { title: 'All refurbished tech', eyebrow: 'The complete collection', description: 'Every inspected device in one place. Compare condition, capacity and price to find your fit.', image: heroRefurbished },
+  smartphones: { title: 'Refurbished smartphones', eyebrow: 'Pocket-sized power', description: 'Flagship iPhone, Galaxy and Pixel devices, unlocked and tested across our full inspection checklist.', image: iphoneShowcase },
+  laptops: { title: 'Refurbished laptops', eyebrow: 'Work without compromise', description: 'Portable performance for focused work, creative projects and everything between.', image: macbookShowcase },
+  tablets: { title: 'Refurbished tablets', eyebrow: 'A canvas for anything', description: 'Flexible screens for drawing, streaming, reading and work on the move.', image: macbookShowcase },
+  wearables: { title: 'Refurbished smartwatches', eyebrow: 'Technology in step', description: 'Fitness, navigation and notifications from fully tested wearable devices.', image: heroRefurbished },
 };
 
 interface Props { category: string; products: Product[]; isDark: boolean; comparedProducts: Product[]; onBack: () => void; onSelectProduct: (product: Product) => void; onToggleCompare: (product: Product) => void; }
